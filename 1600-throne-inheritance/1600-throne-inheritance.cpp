@@ -1,27 +1,27 @@
 class ThroneInheritance {
     unordered_map<string, vector<string>> children;
-    unordered_set<string> alive;
+    set<string> alive;
     string king;
     
-    void getInheritanceOrder(string const& cur, vector<string> &ret) {
+    void getInheritanceOrder(string cur, vector<string> &ret) {
         if (alive.count(cur) != 0) {
             ret.push_back(cur);
         }
-        for (auto const& next : children[cur]) {
+        for (string next : children[cur]) {
             getInheritanceOrder(next, ret);
         }
     }
 public:
-    ThroneInheritance(string const& kingName) : king(kingName) {
+    ThroneInheritance(string kingName) : king(kingName) {
         alive.insert(king);
     }
     
-    void birth(string const& pname, string const& cname) {
+    void birth(string pname, string cname) {
         children[pname].push_back(cname);
         alive.insert(cname);
     }
     
-    void death(string const& name) {
+    void death(string name) {
         alive.erase(name);
     }
     
