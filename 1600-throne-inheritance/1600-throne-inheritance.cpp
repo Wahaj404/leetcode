@@ -1,6 +1,6 @@
 class ThroneInheritance {
     unordered_map<string, vector<string>> children;
-    set<string> alive;
+    unordered_set<string> alive;
     string king;
     
     void getInheritanceOrder(string cur, vector<string> &ret) {
