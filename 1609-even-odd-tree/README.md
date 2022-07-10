@@ -10,7 +10,7 @@
 
 <p>&nbsp;</p>
 <p><strong>Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/09/15/sample_1_1966.png" style="width: 362px; height: 229px;" title="">
+<img alt="" src="https://assets.leetcode.com/uploads/2020/09/15/sample_1_1966.png" style="width: 362px; height: 229px;">
 <pre><strong>Input:</strong> root = [1,10,4,3,null,7,9,12,8,6,null,null,2]
 <strong>Output:</strong> true
 <strong>Explanation:</strong> The node values on each level are:
