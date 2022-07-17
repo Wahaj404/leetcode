@@ -8,10 +8,8 @@ public:
         }
         int mx = INT_MIN;
         for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (i != j) {
-                    mx = max(mx, (int)(v[i].size() + v[j].size() - v[i].count(j)));             
-                }
+            for (int j = i + 1; j < n; ++j) {
+                mx = max(mx, (int)(v[i].size() + v[j].size() - v[i].count(j)));
             }
         }
         return mx;
